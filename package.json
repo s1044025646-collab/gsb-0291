@@ -1,0 +1,18 @@
+{
+  "name": "ucb1-bandit-backend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "UCB1 多臂老虎机顺序决策与奖励反馈回放后端(仅 API 与 CLI)",
+  "type": "commonjs",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test dist/test/ucb1.test.js",
+    "start": "npm run build && node dist/src/api.js",
+    "cli": "npm run build && node dist/src/cli.js",
+    "demo": "npm run build && node dist/src/cli.js demo"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.0",
+    "@types/node": "^22.0.0"
+  }
+}
